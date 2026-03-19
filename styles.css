@@ -56,6 +56,8 @@ nav .logo{
 }
 
 footer {
+  /* position: fixed;
+  bottom: 0; */
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -101,4 +103,11 @@ footer .logo{
         overflow: hidden;
         margin-top: 6px; 
     }
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
 }
