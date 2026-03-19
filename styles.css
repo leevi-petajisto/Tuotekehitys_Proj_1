@@ -92,7 +92,6 @@ footer .logo{
     margin-top: 6px;
 }
 
-
 @media (max-width: 700px) {
     nav .logo, 
     footer .logo{
@@ -105,7 +104,7 @@ footer .logo{
     }
 }
 
-body {
+.home-page {
   min-height: 100vh;
   margin: 0;
   display: grid;
