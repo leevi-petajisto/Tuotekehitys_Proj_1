@@ -57,7 +57,7 @@ nav .logo{
 
 footer {
   /* position: fixed;
-  bottom: 0; */
+  bottom: 0; */  
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -92,6 +92,7 @@ footer .logo{
     margin-top: 6px;
 }
 
+
 @media (max-width: 700px) {
     nav .logo, 
     footer .logo{
@@ -102,11 +103,73 @@ footer .logo{
         overflow: hidden;
         margin-top: 6px; 
     }
-}
+  }
 
-.home-page {
+ .home-page {
   min-height: 100vh;
   margin: 0;
   display: grid;
   grid-template-rows: auto 1fr auto;
+ } 
+.faq{
+  table {
+    table-layout: fixed;
+    width: 80%;
+    margin: 10px auto;
+    border-collapse: collapse;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    color: whitesmoke;
+    
 }
+
+caption {
+  padding: 1em;
+  font-family: 'Inter',sans-serif;
+  caption-side: bottom;
+  letter-spacing: 1px;
+  color: black;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: rgb(65, 112, 94);
+}
+
+tbody tr:nth-child(even) {
+  background-color: rgb(13, 52, 69);
+}
+
+th,
+td {
+  padding: 1em;
+}
+tr:nth-child(2),
+tr:nth-child() {
+    text-align: right;
+    width: 25%;
+}
+tr:nth-child(1),
+tr:nth-child() {
+    text-align: left;
+    width: 30%;
+}
+
+tfoot tr :nth-child(1) {
+    text-align: right;
+}
+
+tfoot tr :nth-child(2) {
+    text-align: left;
+}
+
+
+th,
+td {
+  vertical-align: top;
+  padding: 0.3em;
+}
+
+tfoot {
+  border-top: 1px solid #999999;
+}
+  }
