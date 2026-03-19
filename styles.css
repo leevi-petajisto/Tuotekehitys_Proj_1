@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Inter',sans-serif;
 }
 
 nav ul {
@@ -120,12 +121,12 @@ footer .logo{
     border-top: 1px solid black;
     border-bottom: 1px solid black;
     color: whitesmoke;
+   
     
 }
 
 caption {
   padding: 1em;
-  font-family: 'Inter',sans-serif;
   caption-side: bottom;
   letter-spacing: 1px;
   color: black;
