@@ -111,6 +111,7 @@ footer .logo{
   display: grid;
   grid-template-rows: auto 1fr auto;
  } 
+ 
 .faq{
   table {
     table-layout: fixed;
