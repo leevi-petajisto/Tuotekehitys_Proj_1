@@ -1,10 +1,10 @@
 * {
-    margin: 10;
-    padding: 10;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
-ul {
+nav ul {
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -16,7 +16,7 @@ ul {
   background-color: rgb(13, 52, 69);
 }
 
-ul li {
+nav ul li {
   position: relative;
   margin: 0 10px;
   list-style: none;
@@ -24,7 +24,7 @@ ul li {
   cursor: pointer;
 }
 
-ul li a {
+nav ul li a {
   display: block;
   color: white;
   text-align: center;
@@ -32,7 +32,7 @@ ul li a {
   text-decoration: none;
 }
 
-ul li a:hover {
+nav ul li a:hover {
   background-color: rgb(65, 112, 94);
 }
 
@@ -46,7 +46,7 @@ nav {
     background-color: rgb(13, 52, 69);
 }
 
-.logo{
+nav .logo{
     display: flex;
     max-width: 100px;
     height: auto;
@@ -55,8 +55,47 @@ nav {
     margin-top: 6px;
 }
 
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 17px;
+  text-align: center;
+  color: white;
+  background-color: rgb(13, 52, 69);
+}
+
+footer ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  list-style-type: none;
+  overflow: hidden;
+}
+
+footer ul li {
+  position: relative;
+  margin: 0 20px;
+}
+
+footer .logo{
+    display: flex;
+    max-width: 80px;
+    height: auto;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-top: 6px;
+}
+
+
 @media (max-width: 700px) {
-    .logo{
+    nav .logo, 
+    footer .logo{
         display: flex;
         max-width: 50px;
         height: auto;
