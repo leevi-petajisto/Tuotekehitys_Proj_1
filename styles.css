@@ -54,6 +54,9 @@ nav .logo{
     border-radius: 50%;
     overflow: hidden;
     margin-top: 6px;
+    /* margin-bottom: 4px;
+    Jos ylä ja alamarginaalin asettais 4px niin
+    logo ei olis kiinni ala reunassa? Olisko ok? */
 }
 
 footer {
@@ -102,7 +105,10 @@ footer .logo{
         height: auto;
         border-radius: 50%;
         overflow: hidden;
-        margin-top: 6px; 
+        margin-top: 6px;
+    /* margin-bottom: 4px;
+    Jos ylä ja alamarginaalin asettais 4px niin
+    logo ei olis kiinni ala reunassa? Olisko ok? */
     }
   }
 
