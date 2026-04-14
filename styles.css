@@ -221,3 +221,9 @@ main {
 main section {
     margin-bottom: 25px;
 }
+
+.info{
+  background-color: rgb(143, 186, 190);
+  .otsikko {
+    text-align: center;
+  }}
