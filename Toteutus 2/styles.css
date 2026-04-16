@@ -1,0 +1,258 @@
+/* ===== ROOT VARIABLES ===== */
+:root {
+  --green: #6fcf97;
+  --dark-green: #27ae60;
+  --light: #f8fdf9;
+  --text: #2f3e34;
+  --card: #ffffff;
+  --nav-height: 70px;
+}
+
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: var(--light);
+  color: var(--text);
+}
+
+/* ========================= */
+/* ===== NAVBAR ONLY ======= */
+/* ========================= */
+
+.site-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: var(--nav-height);
+  z-index: 1000;
+  background: white;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.navbar {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.4rem;
+  color: var(--dark-green);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text);
+  position: relative;
+}
+
+/* underline animation */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: var(--green);
+  left: 0;
+  bottom: -5px;
+  transition: 0.3s;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* HAMBURGER */
+#menu-toggle {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: var(--text);
+  margin: 4px 0;
+  transition: 0.3s;
+}
+
+/* animate to X */
+#menu-toggle:checked + .hamburger span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+#menu-toggle:checked + .hamburger span:nth-child(2) {
+  opacity: 0;
+}
+#menu-toggle:checked + .hamburger span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* ========================= */
+/* ===== PAGE CONTENT ====== */
+/* ========================= */
+
+.etusivu {
+  padding-top: var(--nav-height);
+}
+
+/* HERO */
+.etusivu .hero {
+  padding: 80px 20px;
+  text-align: center;
+  background: linear-gradient(to bottom, #ffffff, #e8f5ec);
+  animation: fadeUp 1s ease;
+}
+
+.etusivu .hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.etusivu .hero p {
+  margin-bottom: 25px;
+  opacity: 0.8;
+}
+
+.hero-image {
+  height: 220px;
+  max-width: 500px;
+  margin: auto;
+  background: #dff5e7;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* CONTENT */
+.etusivu .content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 280px;
+  gap: 25px;
+  padding: 60px 30px;
+}
+
+.left, .middle {
+  background: var(--card);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  transition: 0.3s;
+}
+
+.left:hover, .middle:hover {
+  transform: translateY(-5px);
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card {
+  background: var(--card);
+  padding: 25px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  transition: 0.3s;
+}
+
+.card:hover {
+  background: var(--green);
+  color: white;
+  transform: translateY(-5px);
+}
+
+/* FOOTER */
+footer {
+  background: #e8f5ec;
+  display: flex;
+  justify-content: space-around;
+  padding: 30px;
+  margin-top: 40px;
+}
+
+/* ========================= */
+/* ===== ANIMATIONS ======== */
+/* ========================= */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ========================= */
+/* ===== RESPONSIVE ======== */
+/* ========================= */
+
+@media (max-width: 768px) {
+
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: var(--nav-height);
+    right: 0;
+    background: white;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.4s ease;
+  }
+
+  #menu-toggle:checked ~ .nav-links {
+    max-height: 300px;
+  }
+
+  .etusivu .content {
+    grid-template-columns: 1fr;
+  }
+
+  .right {
+    flex-direction: row;
+  }
+
+  .card {
+    flex: 1;
+  }
+
+  .etusivu footer {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+}
