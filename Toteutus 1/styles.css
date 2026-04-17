@@ -4,6 +4,64 @@
     box-sizing: border-box;
     font-family: 'Inter',sans-serif;
 }
+.hinnasto {
+  margin: 0;
+  background: rgb(92, 156, 177);
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+
+
+/* grid */
+.hinnoittelu {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 60px;
+}
+
+/* kortit */
+.kortti {
+  background: rgb(13, 52, 69);
+  border-radius: 20px;
+  padding: 30px;
+  border: 1px solid #2a2a2d;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  transition: 0.3s;
+
+
+  &:hover {
+  transform: translateY(-5px);
+  border-color: #3a3a3f;
+  }
+}
+/* tekstit */
+.hinta {
+  font-size: 40px;
+  font-weight: 600;
+
+
+& span {
+  font-size: 14px;
+  color: #aaa;
+}
+}
+.kuvaus {
+  color: #bbb;
+}
+
+/* napit */
+.nappi {
+  margin-top: auto;
+  padding: 12px;
+  border-radius: 999px;
+  border: none;
+  background: rgb(65, 112, 94);
+  color: white;
+  cursor: pointer;
+}
+}
 
 nav ul {
   display: flex;
