@@ -180,10 +180,153 @@ body {
 }
 
 .card:hover {
-  background: var(--green);
-  color: white;
+  background: var(--card);
+  color: var(--green);
   transform: translateY(-5px);
 }
+
+/* HINNASTO */
+.hinnasto2 {
+  padding-top: var(--nav-height);
+  margin: 0;
+  background: var(--light);
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+
+  .hero-hinnasto {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 3rem 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .hero-teksti {
+    flex: 1;
+  }
+  .hero-teksti h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+  }
+  .hero-teksti p {
+    font-size: 1.5rem;
+    line-height: 1.7;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  .huom-teksti {
+    color: #1a4f8a;
+  }
+  .hero-kuva {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+.hero-kuva img {
+  width: 80%;
+  border-radius: 20px;
+  object-fit: cover;
+  aspect-ratio: 4/5;
+}
+  .hinnasto-otsikko {
+    text-align: center;
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin: 2rem 0 1.5rem;
+  }
+  .hinnoittelu {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 60px;
+  }
+  .kortti:nth-child(n+4) {
+    margin-top: 30px;
+  }
+  .kortti {
+    border-radius: 20px;
+    padding: 30px;
+    border: 1px solid #2a2a2d;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    transition: 0.3s;
+    position: relative;
+    isolation: isolate;
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: var(--card);
+      border-radius: 20px;
+      z-index: -1;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: var(--green);
+      border-radius: 20px;
+      z-index: -2;
+      opacity: 0;
+      transition: 0.4s ease;
+    }
+    &:hover::before {
+      transform: rotate(-3deg) translate(-8px, -4px);
+      opacity: 1;
+    }
+    &:hover {
+      transform: translateY(-5px);
+      border-color: #3a3a3f;
+    }
+  }
+  .hinta {
+    font-size: 40px;
+    font-weight: 600;
+
+    & span {
+      font-size: 14px;
+      color: var(--text);
+    }
+  }
+  .kuvaus {
+    color: var(--text);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  .kortti:hover .kuvaus {
+    opacity: 1;
+  }
+  .nappi {
+    margin-top: auto;
+    padding: 12px;
+    border-radius: 999px;
+    border: none;
+    background: var(--green);
+    color: white;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 60px;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.3);
+      transform: skewX(-20deg);
+      transition: left 0.4s ease;
+    }
+    &:hover::before {
+      left: 150%;
+    }
+  }
+}
+
 
 /* FOOTER */
 footer {
@@ -218,7 +361,9 @@ footer {
   .hamburger {
     display: flex;
   }
-
+  .hero-hinnasto {
+    flex-direction: column;
+  }
   .nav-links {
     position: absolute;
     top: var(--nav-height);
@@ -255,4 +400,5 @@ footer {
     gap: 10px;
     text-align: center;
   }
+  
 }
