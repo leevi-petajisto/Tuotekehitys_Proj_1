@@ -356,6 +356,71 @@ footer {
 /* ===== Responsiivisuus ====== */
 /* ============================ */
 
+/* =============================== */
+/* ====== Yhteystiedot-sivu ====== */
+/* =============================== */
+
+/* Pääsäiliö (Container), joka siirtää sisällön irti reunoista ja keskittää sen */
+.main-contacts {
+  padding-top: calc(var(--nav-height) + 40px); /* Tilaa kiinteän navin alle */
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 60px;
+}
+
+.hero-section {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.hero-section p {
+  opacity: 0.8;
+}
+
+/* Grid-asettelu yhteystiedoille ja siistijöille vierekkäin */
+.contact-info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+/* Yhteystieto- ja siistijäkorttien tyyli (kopioitu etusivun .card/left/middle tyylistä) */
+.contact-details, .cleaners {
+  background: var(--card);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.contact-details h3, .cleaners h3 {
+  color: var(--dark-green);
+  margin-bottom: 15px;
+}
+
+.contact-details p {
+  margin-bottom: 10px;
+}
+
+.cleaners ul {
+  margin-top: 10px;
+  padding-left: 20px; /* Siirtää listan palloja hieman oikealle */
+}
+
+/* Kartan tyylittely */
+.map-container {
+  border-radius: 20px;
+  overflow: hidden; /* Pitää kartan kulmat pyöreinä, ettei iframe mene yli */
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.map-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
 @media (max-width: 768px) {
 
   .hamburger {
