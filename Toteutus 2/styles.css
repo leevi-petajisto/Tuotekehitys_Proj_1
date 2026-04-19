@@ -241,6 +241,41 @@ body {
     gap: 20px;
     padding: 60px;
   }
+  .kortti-media {
+  position: relative;
+  height: 110px;
+  }
+
+  .kortti-kuva {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  right: 10px;
+  bottom:  0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 12px;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  }
+
+  .kuvaus {
+  position: absolute;
+  inset: 0;
+  color: var(--text);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  overflow-y: auto;
+  }
+
+  .kortti:hover .kortti-kuva {
+  opacity: 0;
+  }
+
+  .kortti:hover .kuvaus {
+  opacity: 1;
+  }
   .kortti:nth-child(n+4) {
     margin-top: 30px;
   }
