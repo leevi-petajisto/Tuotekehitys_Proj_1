@@ -560,5 +560,10 @@ footer {
     gap: 10px;
     text-align: center;
   }
+
+/* Yhteystiedot-sivun uudet mobiiliasetukset */
+  .cleaners-grid {
+    grid-template-columns: 1fr; /* Puhelimella vain yksi sarake */
+  }
   
 }
