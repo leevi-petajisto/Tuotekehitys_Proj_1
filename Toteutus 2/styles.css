@@ -472,7 +472,7 @@ footer {
   margin-bottom: 10px;
 }
 
-/* === SIISTIJÄT (samat efektit kuin Miken hinnastossa) === */
+/* === siistijät (samat efektit kuin Miken hinnastossa) === */
 .cleaners-section {
   text-align: center;
   margin-bottom: 50px;
@@ -538,6 +538,17 @@ footer {
 .cleaner-card h4 {
   font-size: 1.2rem;
   color: var(--text);
+}
+
+/* siistijöiden profiilikuvat */
+.cleaner-img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%; /* pyöreä kuva */
+  object-fit: cover; /* estää kuvan venymisen */
+  margin-bottom: 15px;
+  border: 3px solid var(--green); /* vihreä reunus */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 /* Kartan tyylittely */
