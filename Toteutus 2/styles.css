@@ -427,13 +427,41 @@ footer {
   margin-bottom: 50px;
 }
 
+/* Yhteystietolaatikon kuvakkeiden tyylit */
+.contact-details i {
+  color: var(--green); /* vihreä väriä! */
+  font-size: 1.2rem;
+  margin-right: 10px;
+  width: 25px; /* kuvakkeet samaan linjaan */
+  text-align: center;
+}
+
+/* yhteystietolaatikko */
 .contact-details {
   background: var(--card);
   padding: 30px;
   border-radius: 20px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-  text-align: center; /* Keskitetään teksti */
+  text-align: left; /* ikonit ja teksti nätissä rivissä */
+  max-width: 400px; /* estää laatikon venymisen liian leveäksi */
+  margin: 0 auto; /* keskittää laatikon keskelle sivua */
 }
+
+/* teksti vasempaan reunaan?
+.contact-details {
+  text-align: left; 
+}
+*/
+
+/*
+.contact-details {
+  background: var(--card);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  text-align: center;  Keskitetään teksti
+}
+*/
 
 .contact-details h3 {
   color: var(--dark-green);
