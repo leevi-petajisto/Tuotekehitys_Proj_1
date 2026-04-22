@@ -478,6 +478,8 @@ footer {
   text-align: left; /* ikonit ja teksti nätissä rivissä */
   max-width: 400px; /* estää laatikon venymisen liian leveäksi */
   margin: 0 auto; /* keskittää laatikon keskelle sivua */
+  overflow-wrap: break-word; /* rivittää pitkät sanat laatikon sisälle */
+  word-wrap: break-word;
 }
 
 /* teksti vasempaan reunaan?
@@ -641,11 +643,16 @@ footer {
     text-align: center;
   }
 
-/* Yhteystiedot-sivun uudet mobiiliasetukset */
+/* yhteystiedot-sivun uudet mobiiliasetukset */
   .cleaners-grid {
-    grid-template-columns: 1fr; /* Puhelimella vain yksi sarake */
+    grid-template-columns: 1fr; /* puhelimella vain yksi sarake */
   }
-  
+
+
+.contact-details {
+    padding: 20px 15px;
+  }
+
 }
 
 /* Info */
