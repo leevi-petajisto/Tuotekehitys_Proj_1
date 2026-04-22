@@ -13,7 +13,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Segoe UI", sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
 body {
@@ -647,7 +647,7 @@ footer {
 
 .about-page {
     background-color: #eef2ee;
-    font-family: Arial, sans-serif;
+    font-family: 'Inter', sans-serif;
     color: #22343d;
     padding-top: 90px;
 }
